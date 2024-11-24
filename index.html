@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+  
+</head>
+<body>
+  <div class="loader fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-50">
+    <div class="flex flex-col items-center">
+      <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-white mt-4 text-lg">Loading...</p>
+    </div>
+  </div>
+  <div class="main w-full overflow-hidden">
+    <nav id="nav" class=" fixed top-0 left-0 w-full px-10 py-5 flex justify-between items-center z-[10] bg-[#00000090]">
+      <img class="images w-32" src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo/ab67d7cd6af126c743b9fcec4039e9da.png" alt="">
+      <div class="nav flex gap-5 items-center">
+        <a href="#home" class="tracking-tight text-white hover:text-blue-400 hover:text-shadow-[0_0_10px_#60A5FA] transition-all duration-300 text-lg">Home</a>
+        <a href="#game" class="tracking-tight text-white hover:text-blue-400 hover:text-shadow-[0_0_10px_#60A5FA] transition-all duration-300 text-lg">Games</a>
+        <a href="#store" class="tracking-tight text-white hover:text-blue-400 hover:text-shadow-[0_0_10px_#60A5FA] transition-all duration-300 text-lg">Store</a>
+        <a href="#news" class="tracking-tight text-white hover:text-blue-400 hover:text-shadow-[0_0_10px_#60A5FA] transition-all duration-300 text-lg">News</a>
+        <a href="#contact" class="tracking-tight text-white hover:text-blue-400 hover:text-shadow-[0_0_10px_#60A5FA] transition-all duration-300 text-lg">Contact</a>
+      </div>
+    </nav>
+    <div id="home" class="w-full h-[130vh] overflow-hidden ">
+      <img class="images w-[60%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 " src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo/ab67d7cd6af126c743b9fcec4039e9da.png" alt="">
+      <div class="w-[35rem] h-[35rem] z-[-1] absolute rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-blue-800 blur-[200px] mix-blend-screen"></div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <div id="game" class=" w-full min-h-screen relative">
+      <h1 class="text-white pb-10 text-center text-[60px] hover:text-blue-400 hover:scale-105 hover:text-shadow-[0_0_30px_#60A5FA] transition-all duration-300">Games</h1>
+      <div class="game-f flex flex-wrap items-center gap-4 items-center justify-between px-20">
+        <img src="game1.jpg" alt="Game 1" class="image w-[40%] object-cover rounded hover:shadow-[0_0_100px_#60A5FA] hover:shadow-[0_0_100px_#EC4899] hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+        <p class="text-white text-lg w-[50%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit, mollitia provident numquam dolor cum rerum voluptas eos harum temporibus quos? Dolor repellendus debitis error quaerat adipisci similique accusantium eligendi nihil mollitia quod id assumenda natus odit illo, suscipit laborum culpa molestiae excepturi, molestias vel.</p>
+      </div>
+      <div class="game-s flex flex-wrap  items-center gap-4 mt-5 items-center justify-between px-20">
+        <p class="text-white text-lg w-[50%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit, mollitia provident numquam dolor cum rerum voluptas eos harum temporibus quos? Dolor repellendus debitis error quaerat adipisci similique accusantium eligendi nihil mollitia quod id assumenda natus odit illo, suscipit laborum culpa molestiae excepturi, molestias vel.</p>
+        <img src="game2.jpg" alt="Game 1" class="image w-[40%] object-cover rounded hover:shadow-[0_0_70px_#60A5FA] hover:scale-105 hover:bg-gradient-to-r hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+
+      </div>
+    </div>
+    <div id="store" class="w-full min-h-screen relative text-center ">
+      <h1 class="text-white pt-20 text-[60px] hover:text-blue-400 hover:scale-105 hover:text-shadow-[0_0_30px_#60A5FA] transition-all duration-300 ">Store</h1>
+      <div class="  flex items-center ">
+      <div class="flex w-full flex-wrap  justify-center gap-10 px-20 py-16">
+        <div class="w-[300px] bg-[#eeeeee3c] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_#60A5FA] hover:scale-105 hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store1.jpg" alt="Store item 1" class="w-full h-[200px] object-cover">
+          <div class="p-4">
+            <h3 class="text-white text-xl font-semibold mb-2">Game Title 1</h3>
+            <p class="text-gray-300 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quibusdam.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">$59.99</button>
+          </div>
+        </div>
+
+        <div class="w-[300px] bg-[#eeeeee3c] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_#b981f6] hover:scale-105 hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store2.jpg" alt="Store item 2" class="w-full h-[200px] object-cover">
+          <div class="p-4">
+            <h3 class="text-white text-xl font-semibold mb-2">Game Title 2</h3>
+            <p class="text-gray-300 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quibusdam.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">$49.99</button>
+          </div>
+        </div>
+
+        <div class="w-[300px] bg-[#eeeeee3c] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_#60A5FA] hover:scale-105 hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store3.jpg" alt="Store item 3" class="w-full h-[200px] object-cover">
+          <div class="p-4">
+            <h3 class="text-white text-xl font-semibold mb-2">Game Title 3</h3>
+            <p class="text-gray-300 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quibusdam.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">$39.99</button>
+          </div>
+        </div>
+
+        <div class="w-[300px] bg-[#eeeeee3c] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-[0_0_40px_#b981f6] hover:scale-105 hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store4.jpg" alt="Store item 4" class="w-full h-[200px] object-cover">
+          <div class="p-4">
+            <h3 class="text-white text-xl font-semibold mb-2">Game Title 4</h3>
+            <p class="text-gray-300 text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quibusdam.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">$29.99</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div id="news" class="w-full min-h-screen relative text-center ">
+      <h1 class="text-white pt-20 text-[5vw] hover:text-blue-400 hover:scale-105 hover:text-shadow-[0_0_30px_#60A5FA] transition-all duration-300">Latest News</h1>
+      <div class="news-f ">
+        
+        <div class=" h-[45vh] relative group overflow-hidden rounded-lg hover:shadow-[0_0_40px_#60A5FA] hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="game1.jpg" alt="News 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-xl font-bold mb-2">New Game Announcement</h3>
+              <p class="text-gray-200 text-sm">Exciting new title coming soon! Stay tuned for more details about our latest gaming adventure.</p>
+            </div>
+          </div>
+        </div>
+        <div class=" h-[45vh] relative group overflow-hidden rounded-lg hover:shadow-[0_0_40px_#60A5FA] hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store1.jpg" alt="News 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-xl font-bold mb-2">Community Event</h3>
+              <p class="text-gray-200 text-sm">Join us this weekend for an exclusive multiplayer tournament with amazing prizes!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="h-[45vh] relative group overflow-hidden rounded-lg hover:shadow-[0_0_40px_#60A5FA] hover:bg-gradient-to-bl hover:from-blue-400 hover:to-pink-500 transition-all duration-300">
+          <img src="store3.jpg" alt="News 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <h3 class="text-white text-xl font-bold mb-2">Update Release</h3>
+              <p class="text-gray-200 text-sm">Check out the latest patch notes and new features in our recent game update.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="contact" class="w-full relative text-center ">
+      <h1 class="text-white pt-20 text-[5vw] hover:text-blue-400 hover:scale-105 hover:text-shadow-[0_0_30px_#60A5FA] transition-all duration-300">Contact Us</h1>
+      
+      <div class="flex justify-center items-center ">
+        <div class="w-[60vw] bg-[#1a1a1a] rounded-xl p-10 relative group">
+          <!-- Animated border effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 group-hover:scale-105 "></div>
+          
+          <!-- Content container -->
+          <div class="relative bg-[#1a1a1a] rounded-xl p-8">
+            <form class="space-y-6">
+              <div class="contact-f flex gap-4">
+                <div class="contact-ff w-[50vw]">
+                  <input type="text" placeholder="Name" class="w-full bg-[#2a2a2a] text-white rounded-lg p-3 border border-transparent focus:border-blue-500 transition-all duration-300 outline-none">
+                </div>
+                <div class="contact-ff w-[50vw]">
+                  <input type="email" placeholder="Email" class="w-full bg-[#2a2a2a] text-white rounded-lg p-3 border border-transparent focus:border-blue-500 transition-all duration-300 outline-none">
+                </div>
+              </div>
+              
+              <input type="text" placeholder="Subject" class="w-full bg-[#2a2a2a] text-white rounded-lg p-3 border border-transparent focus:border-blue-500 transition-all duration-300 outline-none">
+              
+              <textarea placeholder="Message" rows="5" class="w-full bg-[#2a2a2a] text-white rounded-lg p-3 border border-transparent focus:border-blue-500 transition-all duration-300 outline-none resize-none"></textarea>
+              
+              <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transform hover:scale-105 transition-all duration-300">
+                Send Message
+              </button>
+            </form>
+            
+            <div class="mt-8 flex justify-center gap-6">
+              <a href="https://x.com/TusharMohta001" class="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition-all duration-300">
+                <svg class="w-[2vw] h-[3vh]" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              </a>
+              
+              <a href="https://www.linkedin.com/in/tushar-mohta-b5409733a/" class="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition-all duration-300">
+                <svg class="w-[2vw] h-[3vh]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.458c.538-.204 1.006.121.832.934z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/tushar_mohta_23/" class="text-gray-400 hover:text-blue-400 transform hover:scale-110 transition-all duration-300">
+                <svg class="w-[2vw] h-[3vh]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.259.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="w-full bg-gray-800 mt-20 text-white text-center p-4">
+      <p>&copy; 2023 Tushar Mohta. All rights reserved.</p>
+    </footer>
+  </div>
+  
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script type="module" src="main.js"></script>
+</body>
+</html>
